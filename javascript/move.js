@@ -26,7 +26,7 @@ $( document ).ready(
 		function mouseMoved( $event )
 		{		
 			if(
-				dist( { x: event.pageX, y: $event.pageY }, last_position ) > 1 &&
+				dist( { x: $event.pageX, y: $event.pageY }, last_position ) > 1 &&
 				! ( last_position.x === 0 && last_position.y === 0 ) &&
 				! left_page &&
 				 new Date().getTime() - last_position.time < 200
