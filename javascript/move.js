@@ -6,7 +6,16 @@ $( document ).ready(
 		var left_page = false;
 		
 		$( window ).resize( resized );
-		$( window ).mousemove( mouseMoved );
+		
+		if( $.browser.msie )
+		{
+			$( document ).mousemove( mouseMoved );
+		}
+		
+		else
+		{
+			$( window ).mousemove( mouseMoved );
+		}
 		
 		resized();
 		
